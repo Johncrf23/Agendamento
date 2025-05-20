@@ -6,16 +6,16 @@ async function Listar() {
     return equipamentos;
 }
 
-async function Inserir(nome, numero) {
-    let sql = "INSERT INTO EQUIPAMENTO (NOME, NUMERO) VALUES (?, ?)";
-    const [result] = await con.connection.query(sql, [nome, numero]);
-    return { id: result.insertId, nome, numero };
+async function Inserir(descricao, numero) {
+    let sql = "INSERT INTO EQUIPAMENTO (DESCRICAO, NUMERO) VALUES (?, ?)";
+    const [result] = await con.connection.query(sql, [descricao, numero]);
+    return { id: result.insertId, descricao, numero };
 }
 
-async function Editar(id, nome, numero) {
+async function Editar(id, descricao, numero) {
     let sql = "UPDATE EQUIPAMENTO SET NOME = ?, NUMERO = ? WHERE ID = ?";
-    const [result] = await con.connection.query(sql, [nome, numero, id]);
-    return { id, nome, numero };
+    const [result] = await con.connection.query(sql, [descricao, numero, id]);
+    return { id, descricao, numero };
 }
 
 async function Excluir(id) {

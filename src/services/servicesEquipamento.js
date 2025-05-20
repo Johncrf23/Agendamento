@@ -5,13 +5,13 @@ async function Listar() {
     return equipamentos;    
 }
 
-async function Inserir(nome, numero) {
-    const equipamentos = await repositoryEquipamento.Inserir(nome, numero);
+async function Inserir(descricao, numero) {
+    const equipamentos = await repositoryEquipamento.Inserir(descricao, numero);
     return equipamentos;
 }
 
-async function Editar(id, nome, numero) {
-    const equipamentos = await repositoryEquipamento.Editar(id, nome, numero);
+async function Editar(id, descricao, numero) {
+    const equipamentos = await repositoryEquipamento.Editar(id, descricao, numero);
     return equipamentos;
 }
 

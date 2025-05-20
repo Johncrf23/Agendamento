@@ -13,8 +13,8 @@ async function Inserir(req, res) {
 
 async function Editar(req, res) {
     const id = req.params.id;
-    const { nome, numero } = req.body;     
-    const equipamento = await servicesEQUIPAMENTO.Editar(id, nome, numero); 
+    const { descricao, numero } = req.body;     
+    const equipamento = await servicesEQUIPAMENTO.Editar(id, descricao, numero); 
     res.status(200).json(equipamento); 
 }
 
