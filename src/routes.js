@@ -1,5 +1,6 @@
 import { Router } from "express";
 import controllerEquipamento from "./controllers/equipamentosController.js";
+import usuarioController from "./controllers/usuarioController.js";
 const router = Router();
 router.get("/", (req, res) =>{
     res.status(200).send("Pagina HOME")
