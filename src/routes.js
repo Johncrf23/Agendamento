@@ -9,4 +9,6 @@ router.post("/equipamentos", controllerEquipamento.Inserir)
 router.get("/equipamentos", controllerEquipamento.Listar)
 router.put("/equipamentos/:id", controllerEquipamento.Editar)
 router.delete("/equipamentos/:id", controllerEquipamento.Excluir)
+router.post("/usuario", usuarioController.Inserir)
+router.post("/login", usuarioController.Login)
 export default router;
