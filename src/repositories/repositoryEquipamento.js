@@ -3,7 +3,7 @@ import con from "../database/connection.js";
 async function Listar() {
     let sql = "SELECT * FROM EQUIPAMENTO";
     const [equipamentos] = await con.connection.execute(sql);
-    return equipamentos;
+    return {equipamentos};
 }
 
 async function Inserir(descricao, numero) {
