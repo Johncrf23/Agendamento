@@ -19,3 +19,8 @@ router.post("/usuario", usuarioController.Inserir);
 router.post("/login", usuarioController.Login);
 
 export default router;
+
+router.get("/ping", (req, res) => {
+  res.status(200).send("Pong! Está funcionando.");
+});
+
